@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffeef2;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; /* Keep content above background */
+}
+
+.gif {
+  max-width: 200px; 
+  width: 80%;       
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Specific adjustment if the asking gif needs to be even bigger */
+.asking-gif {
+  max-width: 250px; 
+}
+
+.header-text {
+  color: #d32f2f;
+  font-size: 2.5rem;
+  margin: 10px 0 30px;
+}
+
+.text-success {
+  color: #4CAF50;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to stack if Yes gets too big */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for size changes */
+}
+
+.yes-btn {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  /* Font-size is handled inline in React */
+}
+
+.yes-btn:hover {
+  background-color: #45a049;
+}
+
+.no-btn {
+  background-color: #f44336;
+  color: white;
+  font-size: 1.2rem; /* Keeps No button small */
+  font-weight: bold;
+}
+
+.no-btn:hover {
+  background-color: #d32f2f;
+}
